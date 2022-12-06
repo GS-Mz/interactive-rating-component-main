@@ -208,3 +208,19 @@ input[type=radio]{
     font-size: 0.99em;
     line-height: 1.5em;
 }
+
+.stepOne a:active{
+    background-color: var(--White);
+    color: var(--Orange);
+    transition: .2s;
+}
+
+/*----------------------------*/
+
+@media (max-width:500px) {
+    .container{
+        width: 310px;
+        height: 320px;
+        margin-right: 1em;
+    }
+}

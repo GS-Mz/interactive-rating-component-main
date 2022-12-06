@@ -5,14 +5,20 @@ let value = 0;
 
 function rating(comp){
     let id= comp.id;
+    for (let i = 1; i < 6; i++) {
+        document.getElementById(i).style.backgroundColor = "var(--circle-bg)";
+        document.getElementById(i).style.color = "var(--LightGrey)";
+    }
+    document.getElementById(id).style.backgroundColor = "var(--Orange)";
+    document.getElementById(id).style.color = "var(--White)";
     value = id;
-    document.getElementById(id).style.backgroundColor = "hsl(25, 97%, 53%)";
-    
+    if(value > 0){
+        submitBtn.addEventListener("click", ()=> {
+            stepOne.style.display = "none";
+            stepTwo.style.display = "flex";
+            document.getElementById("resultado").innerText = value;
+        })
+    }   
+
 }
 
-if(value > 0){
-    submitBtn.addEventListener("click", ()=> {
-        stepOne.style.display = "none";
-        stepTwo.style.display = "flex";
-    })
-}
