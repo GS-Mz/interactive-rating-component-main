@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+  <div class="container">
+    <article class="stepOne" id="choosing">
+      <!-- Rating state start -->
+      <figure class="star-icon"><img src="/images/icon-star.svg"></figure>
+
+      <h1>How did we do?</h1>
+
+      <p>Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!</p>
+
+      <form>
+        <ul>
+          <li onclick="rating(this)"><input type="radio" id="1" name="rating">1</li>
+          <li onclick="rating(this)"><input type="radio" id="2" name="rating">2</li>
+          <li onclick="rating(this)"><input type="radio" id="3" name="rating">3</li>
+          <li onclick="rating(this)"><input type="radio" id="4" name="rating">4</li>
+          <li onclick="rating(this)"><input type="radio" id="5" name="rating">5</li>
+        </ul>
+      </form>
+
+      <a href="#" id="submit">
+        <span>Submit</span>
+      </a>
+
+    </article>
+    <article class="stepTwo" id="selected">
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <img src="/images/illustration-thank-you.svg" class="thankImg">
+
+      <p class="selected">You selected <span id="resultado"></span> out of 5</p>
+
+      <h2>Thank you!</h2>
+
+      <p>We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!</p>
+
+      <!-- Thank you state end -->
+    </article>
+  </div>
+
+  <!------------------------------------------------------------------------------>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Gonzalo Mendoza</a>.
+  </div>
+</body>
+
+<script type="text/javascript" src="/javascript/index.js"></script>
+
+</html>

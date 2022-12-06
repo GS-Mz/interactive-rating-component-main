@@ -1,0 +1,210 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.attribution{
+    visibility: hidden;
+}
+
+/*CSS RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+    text-decoration: none;
+    outline: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*CSS RESET END*/
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+/*END FONTS*/
+/*VARIABLES*/
+:root{
+    --Orange: hsl(25, 97%, 53%);
+    --LightOrange: hsl(25, 55%, 55%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+    --circle-bg: #262F38;
+    --background-degrade: radial-gradient(circle at top, var(--DarkBlue)  0%, #171f2a  100%);
+}
+
+/*END VARIABLES*/
+
+body{
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: var(--VeryDarkBlue);
+    font-family: 'Overpass', sans-serif;
+}
+
+.container{
+    width: 355px;
+    height: 355px;
+    display: flex;
+    padding: 2em;
+    background: var(--background-degrade);
+    border-radius: 30px;
+}
+
+#selected{
+    display: none;
+}
+
+#choosing{
+    
+}
+
+/* -------------------- */
+
+input[type=radio]{
+    margin-top: 12px;
+    height: 52px;
+    width: 52px;
+    border-radius: 100%;
+    visibility: hidden;
+   }
+
+/*------STEP 1----------*/
+.star-icon{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--circle-bg);
+    display: grid;
+    place-content: center;
+}
+.star-icon img{
+    transform: scale(1);
+}
+
+.stepOne{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stepOne h1{
+    font-size: 1.8em;
+    color: var(--White);
+    font-weight: 400;
+}
+.stepOne p{
+    font-size: 1em;
+    color: var(--LightGrey);
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+.stepOne ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.stepOne ul li{
+    display: grid;
+    place-content: center;
+    font-size: 1em;
+    color: var(--LightGrey);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--circle-bg);
+    font-weight: 700;
+}
+
+.stepOne a{
+    width: 100%;
+    height: 40px;
+    background-color: var(--Orange);
+    color: var(--White);
+    display: inline-block;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.9em;
+}
+
+.stepOne ul li:hover{
+    background-color: var(--MediumGrey);
+    color: var(--White);
+    cursor: pointer;
+    transition: .35s;
+}
+/*------STEP 2----------*/
+.stepTwo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.thankImg{
+    width: 150px;
+    height: auto;
+}
+
+.stepTwo .selected{
+    background-color: var(--circle-bg);
+    color: var(--LightOrange);
+    padding: 0.6em 1.9em 0.6em 1.9em;
+    border-radius: 30px;
+    font-size: 0.9em;
+}
+
+.stepTwo h2{
+    color: var(--White);
+    font-weight: 700;
+    font-size: 1.7em;
+}
+
+.stepTwo p{
+    color: var(--LightGrey);
+    text-align: center;
+    font-size: 0.99em;
+    line-height: 1.5em;
+}
